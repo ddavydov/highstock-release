@@ -463,6 +463,11 @@ extend(Chart.prototype, {
 		win.focus(); // #1510
 		win.print();
 
+    if (win.stop) {
+      location.reload();
+      win.stop();
+    }
+
 		// allow the browser to prepare before reverting
 		setTimeout(function () {
 
